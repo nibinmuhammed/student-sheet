@@ -1,0 +1,116 @@
+<div class="input-group m-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">Search</span>
+  <input
+    type="text"
+    class="form-control"
+    aria-label="Sizing example input"
+    aria-describedby="inputGroup-sizing-default"
+    (keyup)="search($event)"
+  />
+</div>
+
+<div class="container m-1">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th><i class="fa-solid fa-square-minus mb-4"></i></th>
+        <th>
+          <h4 class="text-center">Name</h4>
+          <div class="d-flex">
+            <button
+              class="btn btn-secondary btn-sm mr-2"
+              (click)="increasing('name', 'Asc')"
+            >
+              <i class="fa-solid fa-angle-up"></i>
+            </button>
+            <button
+              class="btn btn-secondary btn-sm"
+              (click)="increasing('name', 'Desc')"
+            >
+              <i class="fa-solid fa-angle-down"></i>
+            </button>
+          </div>
+        </th>
+        <th>
+          <h4 class="text-center">Gender</h4>
+          <div class="d-flex">
+            <button
+              class="btn btn-secondary btn-sm mr-2"
+              (click)="increasing('gender', 'Asc')"
+            >
+              <i class="fa-solid fa-angle-up"></i>
+            </button>
+            <button
+              class="btn btn-secondary btn-sm"
+              (click)="increasing('gender', 'Desc')"
+            >
+              <i class="fa-solid fa-angle-down"></i>
+            </button>
+          </div>
+        </th>
+        <th>
+          <h4 class="text-center">Physics</h4>
+          <div class="d-flex">
+            <button
+              class="btn btn-secondary btn-sm mr-2"
+              (click)="increasing('physics', 'Asc')"
+            >
+              <i class="fa-solid fa-angle-up"></i>
+            </button>
+            <button
+              class="btn btn-secondary btn-sm"
+              (click)="increasing('physics', 'Desc')"
+            >
+              <i class="fa-solid fa-angle-down"></i>
+            </button>
+          </div>
+        </th>
+        <th>
+          <h4 class="text-center">Maths</h4>
+          <div class="d-flex">
+            <button
+              class="btn btn-secondary btn-sm mr-2"
+              (click)="increasing('maths', 'Asc')"
+            >
+              <i class="fa-solid fa-angle-up"></i>
+            </button>
+            <button
+              class="btn btn-secondary btn-sm"
+              (click)="increasing('maths', 'Desc')"
+            >
+              <i class="fa-solid fa-angle-down"></i>
+            </button>
+          </div>
+        </th>
+        <th>
+          <h4 class="text-center">English</h4>
+          <div class="d-flex">
+            <button
+              class="btn btn-secondary btn-sm mr-2"
+              (click)="increasing('english', 'Asc')"
+            >
+              <i class="fa-solid fa-angle-up"></i>
+            </button>
+            <button
+              class="btn btn-secondary btn-sm"
+              (click)="increasing('english', 'Desc')"
+            >
+              <i class="fa-solid fa-angle-down"></i>
+            </button>
+          </div>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr class="text-center" *ngFor="let list of listData">
+        <th><input type="checkbox" /></th>
+        <th>{{ list.name }}</th>
+        <th>{{ list.gender }}</th>
+        <th>{{ list.physics }}</th>
+        <th>{{ list.maths }}</th>
+        <th>{{ list.english }}</th>
+      </tr>
+    </tbody>
+  </table>
+</div>
